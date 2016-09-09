@@ -1,0 +1,6 @@
+*.pyc
+*.log
+log
+nohup.out
+*/config.py
+extract_page/config.py
