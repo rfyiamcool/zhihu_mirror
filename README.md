@@ -7,13 +7,20 @@
 
 对于知乎这样一个ugc（User Generated Content）网站而言，用户是核心，所有的内容都是用户产生的。
 
-1 问题，用户发表问题
-2 回答，用户回答问题
-3 评论，对于答案还有评论(不抓)
-4 投票，用户对支持的答案投票，就是点赞吧
-5 专栏，用户还可以写专栏
-6 收藏，收藏(colletion)，用户创建，类似豆瓣书单之类，
-7 话题，就是给问题打得标签，问题一般都会从属于话题，就是给问题打得标签
+1.  问题，用户发表问题
+
+2.  回答，用户回答问题
+
+3.  评论，对于答案还有评论(不抓)
+
+4.  投票，用户对支持的答案投票，就是点赞吧
+
+5.  专栏，用户还可以写专栏
+
+6.  收藏，收藏(colletion)，用户创建，类似豆瓣书单之类，
+
+7.  话题，就是给问题打得标签，问题一般都会从属于话题，就是给问题打得标签
+
 
 以上大部分都是非登录可见的，
 
@@ -24,6 +31,7 @@
 topic列表
 
 专栏api
+
 以这个 [http://zhuanlan.zhihu.com/biochem](看的懂的生物学)为例：
 
 * http://zhuanlan.zhihu.com/api/columns/biochem 获取该专栏的详细信息
@@ -31,7 +39,6 @@ topic列表
 
 * http://zhuanlan.zhihu.com/api/columns/biochem/followers 获取专栏的粉丝
 * http://zhuanlan.zhihu.com/api/columns/biochem/followers?limit=20&offset=20 分页粉丝
-
 
 
 ####频率限制
