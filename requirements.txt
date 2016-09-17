@@ -4,5 +4,4 @@ peewee==2.8.0
 redis==2.10.5
 requests==2.10.0
 supervisor==3.2.3
-ftfy==4.1.1
 furl==0.4.95
