@@ -19,8 +19,6 @@ logger_err = get_logger("/home/operation/zhihu/log/transfer.err",'transfer')
 
 get the spider result by given api ,and store into redis
 
-http://code.admaster.co/social-base/quantum_docs/blob/master/SuperSpider/UserManual.md
-
 """
 
 def get_task():
