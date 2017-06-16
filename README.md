@@ -66,22 +66,21 @@ topic列表
 知乎在2016-5月份之后开始做了单ip的限制频率.
 
 
-####目前的方案
+##目前的方案
 
 知乎的[跟话题](https://www.zhihu.com/topic/19776749/questions),我们认为通过这个页面可以找到知乎所有的问题，假装是吧。
 
 由问题页可以得到user，通过user可以获取专栏，通过专栏的粉丝接口可以获取更多user，如此反复，无穷匮也
 
 
-#####生成任务的思路:
+##生成任务的思路:
 
 A.  根据经验根话题生成5w个page页面.
 
 B. 暂时, 用户的信息抓取, 需要手动来生成url任务。  File: `get_user_url.py`  ,它把库中的question的user_url字段提取出来，拼装url. [https://www.zhihu.com/people/magicying](https://www.zhihu.com/people/magicying)。
 
 
-
-#####抓取解析的思路:
+#抓取解析的思路:
 
 A.  首先找到他的根话题的页面，[https://www.zhihu.com/topic/19776749/newest](https://www.zhihu.com/topic/19776749/newest) , 知乎的根话题页是含有所有的问题页的。
 
@@ -89,8 +88,7 @@ B.  调用`topic.py` 抽取question_link | href 属性，组装url再塞入大�
 
 C.  具体的问答页面如果有答案的`分页`，那么我们是可以拿到最小，最大分页数。 (有些热门问答，答案贼多)，样例: [https://www.zhihu.com/question/35233031?sort=created](https://www.zhihu.com/question/35233031?sort=created)。 那么，xpath分析页面后，可以把具体的问答页拆分成一个个含有分页的url，再次推送给大爬虫。 url样例: [https://www.zhihu.com/question/35233031?sort=created&page=2](https://www.zhihu.com/question/35233031?sort=created&page=2) 
 
-
-    注意:  到此为止，问题，答案，topic信息都已经抓取.
+`注意:  到此为止，问题，答案，topic信息都已经抓取.`
 
 
 #####注:
